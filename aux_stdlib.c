@@ -22,15 +22,6 @@ int get_len(int n)
 	while (n1 > 9)
 	{
 		lenght++;
-		n1 = n * -1;
-	}
-	else
-	{
-		n1 = n;
-	}
-	while (n1 > 9)
-	{
-		lenght++;
 		n1 = n1 / 10;
 	}
 
@@ -104,6 +95,6 @@ int _atoi(char *s)
 	{
 		oi = oi + ((*(s + i) - 48) * m);
 		m /= 10;
-}
+	}
 	return (oi * pn);
 }

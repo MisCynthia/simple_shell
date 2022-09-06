@@ -21,7 +21,7 @@ void _memcpy(void *newptr, const void *ptr, unsigned int size)
 /**
  * _realloc - reallocates a memory block.
  * @ptr: pointer to the memory previously allocated.
-* @old_size: size, in bytes, of the allocated space of ptr.
+ * @old_size: size, in bytes, of the allocated space of ptr.
  * @new_size: new size, in bytes, of the new memory block.
  *
  * Return: ptr.
@@ -33,11 +33,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	void *newptr;
 
 	if (ptr == NULL)
-		return (malloc(new_size));
-
-	if (new_size == 0)
-	{
-		free(ptr);
 		return (malloc(new_size));
 
 	if (new_size == 0)
@@ -67,7 +62,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
  * @ptr: double pointer to the memory previously allocated.
  * @old_size: size, in bytes, of the allocated space of ptr.
  * @new_size: new size, in bytes, of the new memory block.
-*
+ *
  * Return: ptr.
  * if new_size == old_size, returns ptr without changes.
  * if malloc fails, returns NULL.
